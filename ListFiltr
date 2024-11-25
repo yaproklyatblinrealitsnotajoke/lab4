@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListFiltr {
+    public static <T> List<T> filter(List<T> inputList, Filtr<T> sorter) {
+        List<T> resultList = new ArrayList<>();
+        for (T item : inputList) {
+            if (sorter.test(item)) resultList.add(item);
+        }
+        return resultList;
+    }
+}
