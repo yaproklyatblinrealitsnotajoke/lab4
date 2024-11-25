@@ -1,0 +1,12 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class ListTransformer {
+    public static <T, P> List<P> transform(List<T> inputList, Transformer<T, P> transformer) {
+        List<P> resultList = new ArrayList<>();
+        for (T item : inputList) {
+            resultList.add(transformer.apply(item));
+        }
+        return resultList;
+    }
+}
