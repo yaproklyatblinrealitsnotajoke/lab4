@@ -1,0 +1,25 @@
+package ru.novitskii.main;
+import ru.novitskii.geometry.Figure;
+import java.util.ArrayList;
+import java.util.List;
+public class Totalarea extends Figure {
+    private List<Figure> figures;
+
+    public Totalarea() {
+        figures = new ArrayList<>();
+    }
+
+    // Метод для добавления фигуры
+    public void addFigure(Figure figure) {
+        figures.add(figure);
+    }
+
+    // Метод для вычисления общей площади всех фигур
+    public double area() {
+        double total = 0;
+        for (Figure figure : figures) {
+            total += figure.area();
+        }
+        return total;
+    }
+}
