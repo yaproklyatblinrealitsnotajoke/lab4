@@ -1,0 +1,349 @@
+package ru.novitskii.main;
+import ru.novitskii.geometry.Point;
+import ru.novitskii.geometry.Pointthree;
+import ru.novitskii.geometry.Box;
+import java.util.Scanner;
+import ru.novitskii.telefon.Tel;
+import ru.novitskii.peoples.Student;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Main m = new Main();
+        Scanner in = new Scanner(System.in);
+
+
+//        System.out.println("Задание 1");
+//        ru.novitskii.geometry.Point x1 = new ru.novitskii.geometry.Point();
+//        x1.inputData();
+//        System.out.println("Точка 1 - " + x1);
+//        ru.novitskii.geometry.Point x2 = new ru.novitskii.geometry.Point();
+//        x2.inputData();
+//        System.out.println("Точка 2 - " + x2);
+//        ru.novitskii.geometry.Point x3 = new ru.novitskii.geometry.Point();
+//        x3.inputData();
+//        System.out.println("Точка 3 - " + x3);
+//
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 2");
+//        ru.novitskii.geometry.Point p1 = new ru.novitskii.geometry.Point(1, 3);
+//        ru.novitskii.geometry.Point p2 = new ru.novitskii.geometry.Point(23, 8);
+//        ru.novitskii.geometry.Point p3 = new ru.novitskii.geometry.Point(5, 10);
+//        ru.novitskii.geometry.Point p4 = new ru.novitskii.geometry.Point(25, 10);
+//        ru.novitskii.geometry.Line l1 = new ru.novitskii.geometry.Line(p1, p2);
+//        ru.novitskii.geometry.Line l2 = new ru.novitskii.geometry.Line(p3, p4);
+//        ru.novitskii.geometry.Line l3 = new ru.novitskii.geometry.Line(p1, p4);
+//        System.out.println(l1);
+//        System.out.println(l2);
+//        System.out.println(l3);
+//        System.out.println("Линии после изменения: ");
+//        p1.setX(45);
+//        p2.setY(78);
+//        p3.setX(7);
+//        p3.setY(19);
+//        System.out.println(l1);
+//        System.out.println(l2);
+//        System.out.println(l3);
+//        System.out.println("Линии после изменения: ");
+//        p2.setX(90);
+//        p2.setY(80);
+//        System.out.println(l1);
+//        System.out.println(l2);
+//        System.out.println(l3);
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 3");
+//        int[] a1 = {3, 4, 5};
+//        ru.novitskii.peoples.Student s1 = new ru.novitskii.peoples.Student("Вася", a1);
+//        ru.novitskii.peoples.Student s2 = new ru.novitskii.peoples.Student("Петя", s1.getO());
+//        int[] a2 = s1.getO();
+//        a2[0] = 5;
+//        s1.setO(a2);
+//        System.out.println(s1);
+//        System.out.println(s2);
+//        ru.novitskii.peoples.Student s3 = new ru.novitskii.peoples.Student("Андрей", s1.getO());
+//        int[] a3 = s1.getO();
+//        s1.setO(a3);
+//        System.out.println("\n");
+//        System.out.println(s1);
+//        System.out.println(s2);
+//        System.out.println(s3);
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 4.1");
+//        ru.novitskii.geometry.Point p10 = new ru.novitskii.geometry.Point(3, 5);
+//        ru.novitskii.geometry.Point p11 = new ru.novitskii.geometry.Point(25, 6);
+//        ru.novitskii.geometry.Point p12 = new ru.novitskii.geometry.Point(7, 8);
+//        System.out.println("Точка - " + p10);
+//        System.out.println("Точка - " + p11);
+//        System.out.println("Точка - " + p12);
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 4.7");
+//        int[] a10 = {3, 4, 5};
+//        ru.novitskii.peoples.Student s10 = new ru.novitskii.peoples.Student("Вася", a10);
+//        ru.novitskii.peoples.Student s11 = new ru.novitskii.peoples.Student("Максим");
+//        System.out.println(s10);
+//        System.out.println(s11);
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 5.6");
+//        int[] a20 = {3, 4, 5, 4};
+//        int[] a21 = {5, 5, 5, 5};
+//        ru.novitskii.peoples.Student s20 = new ru.novitskii.peoples.Student("Вася", a20);
+//        ru.novitskii.peoples.Student s21 = new ru.novitskii.peoples.Student("Петя", a21);
+//        double sr1 = s20.sr();
+//        double sr2 = s21.sr();
+//        System.out.println("Средний балл Васи - " + sr1);
+//        System.out.println("Вася - " + s20.otl());
+//
+//        System.out.println("Средний балл Пети - " + sr2);
+//        System.out.println("Петя - " + s21.otl());
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 1.9");
+//        int[] a20 = {1, 2, 4};
+//        int[] a21 = {5, 5, 5, 5};
+//        ru.novitskii.peoples.Student s20 = new ru.novitskii.peoples.Student("Вася", a20);
+//        ru.novitskii.peoples.Student s21 = new ru.novitskii.peoples.Student("Петя", a21);
+//        double sr1 = s20.sr();
+//        double sr2 = s21.sr();
+//        System.out.println("Средний балл Васи - " + sr1);
+//        System.out.println("Вася - " + s20.otl());
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 2.3");
+//
+//
+//
+//        ru.novitskii.telefon.Tel directory = new ru.novitskii.telefon.Tel();
+//
+//        directory.add("89003337788", "Вася");
+//        directory.add("89004448899", "Петя");
+//
+//        System.out.println("Справочник:\n" + directory);
+//
+//        System.out.println("Телефон Васи: " + directory.getTel("Вася"));
+//
+//        directory.del("Петя");
+//        System.out.println("Справочник после удаления Пети:\n" + directory);
+//
+//        System.out.println("Есть ли телефон 89003337788: " + directory.isT("89003337788"));
+//        System.out.println("Есть ли имя Петя: " + directory.isN("Петя"));
+//
+//        System.out.println("Количество контактов: " + directory.count());
+//
+//        String[] names = directory.allN();
+//        System.out.println("Все имена: " + String.join(", ", names));
+//
+//        String[] nameStart = directory.allNS("В");
+//        System.out.println("Имена, начинающиеся на 'В': " + String.join(", ", nameStart));
+//
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 3.5");
+//
+//        ru.novitskii.geometry.Pointthree x1 = new ru.novitskii.geometry.Pointthree();
+//        x1.inputData();
+//        System.out.println("Точка 1 - " + x1);
+//        ru.novitskii.geometry.Pointthree x2 = new ru.novitskii.geometry.Pointthree();
+//        x2.inputData();
+//        System.out.println("Точка 2 - " + x2);
+//        ru.novitskii.geometry.Pointthree x3 = new ru.novitskii.geometry.Pointthree();
+//        x3.inputData();
+//        System.out.println("Точка 3 - " + x3);
+//
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 4.4");
+//        ru.novitskii.geometry.Circle circle = new ru.novitskii.geometry.Circle(5, 6, 7);
+//        ru.novitskii.geometry.Square square = new ru.novitskii.geometry.Square(5, 6, 9);
+//        ru.novitskii.geometry.Rectangle rectangle = new ru.novitskii.geometry.Rectangle(7, 4, 8, 3);
+//        ru.novitskii.geometry.Triangle triangle = new ru.novitskii.geometry.Triangle(0, 0, 4, 0, 0, 3);
+//        // Выводим площади фигур
+//        System.out.println("площадь круга: " + circle.area());
+//        System.out.println("площадь квадрата: " + square.area());
+//        System.out.println("площадь прямоугольника: " + rectangle.area());
+//        System.out.println("площадь треугольника: " + triangle.area());
+//
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 5.3");
+//        ru.novitskii.geometry.Circle circle1 = new ru.novitskii.geometry.Circle(5, 6, 7);
+//        ru.novitskii.geometry.Circle circle2 = new ru.novitskii.geometry.Circle(2, 3, 9);
+//        ru.novitskii.geometry.Square square1 = new ru.novitskii.geometry.Square(5, 6, 9);
+//        ru.novitskii.geometry.Square square2 = new ru.novitskii.geometry.Square(10, 11, 12);
+//        ru.novitskii.main.Totalarea.addFigure(circle1);
+//        ru.novitskii.main.Totalarea.addFigure(circle2);
+//        ru.novitskii.main.Totalarea.addFigure(square1);
+//        ru.novitskii.main.Totalarea.addFigure(square2);
+//        System.out.println("Total Area: " + ru.novitskii.geometry.Figure.area());
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 6.2");
+//        ru.novitskii.geometry.Point x1 = new ru.novitskii.geometry.Point();
+//        x1.inputData();
+//        System.out.println("Точка 1 - " + x1);
+//        ru.novitskii.geometry.Point x2 = new ru.novitskii.geometry.Point();
+//        x2.inputData();
+//        System.out.println("Точка 2 - " + x2);
+//        ru.novitskii.geometry.Point x3 = new ru.novitskii.geometry.Point();
+//        x3.inputData();
+//        System.out.println("Точка 3 - " + x3);
+//
+//        System.out.println("point1.equals(point2): " + x1.equals(x2));
+//        System.out.println("point1.equals(point3): " + x1.equals(x3));
+
+
+//        System.out.println("-------------------------------------------");
+////
+//        System.out.println("Задание 7.3");
+//        if (args.length < 2) {
+//            System.out.println("Пожалуйста, укажите два целых числа в качестве аргументов командной строки.");
+//            return;
+//        }
+//
+//        // Получение аргументов командной строки
+//        String xStr = args[0];
+//        String yStr = args[1];
+//
+//        // Преобразование строк в целые числа с использованием коротких имен статических методов
+//        int x = Integer.parseInt(xStr);
+//        int y = Integer.parseInt(yStr);
+//
+//        // Возведение X в степень Y с использованием короткого имени статического метода
+//        double result = Math.pow(x, y);
+//
+//        // Вывод результата
+//        System.out.printf("%s в степени %s равно %.2f%n", xStr, yStr, result);
+//
+//        System.out.println("-------------------------------------------");
+//
+//        System.out.println("Задание 8.4");
+//        try {
+//            Point original = new Point(1, 2);
+//            // Клонируем объект original
+//            Point cloned = (Point) original.clone();
+//
+//            // Выводим значения координат оригинальной точки и ее клона
+//            System.out.println("Оригинальная точка: (" + original.getX() + ", " + original.getY() + ")");
+//            System.out.println("Клон точки: (" + cloned.getX() + ", " + cloned.getY() + ")");
+//
+//            // Проверяем, что оригинальный и клонированный объекты - разные экземпляры
+//            System.out.println("Это разные объекты? " + (original != cloned)); // Должно быть true
+//
+//        } catch (CloneNotSupportedException e) {
+//            e.printStackTrace(); // Обработка исключения
+//        }
+
+        System.out.println("Задание 1.3");
+
+        int[] a20 = {3, 2, 4};
+        int[] a21 = {5, 5, 5, 5};
+        ru.novitskii.peoples.Student s20 = new ru.novitskii.peoples.Student("Вася", a20);
+        ru.novitskii.peoples.Student s21 = new ru.novitskii.peoples.Student("Петя", a21);
+        double sr1 = s20.sr();
+        double sr2 = s21.sr();
+        int result = s20.compare(s21);
+        if (result > 0) {
+            System.out.println(result + "(" + s20.getName() + " старше " + s21.getName() + ")");
+        } else if (result < 0) {
+            System.out.println(result + "(" + s20.getName() + " моложе " + s21.getName() + ")");
+        } else {
+            System.out.println(result + "(" + s20.getName() + " и " + s21.getName() + " одного возраста" + ")");
+        }
+
+        System.out.println("-------------------------------------------");
+
+        System.out.println("Задание 2.3");
+        Box<Pointthree> box = new Box<>();
+        addPointToBox(box);
+        Pointthree point1 = box.remove();
+        System.out.println("Извлеченная точка: " + point1);
+
+        System.out.println("-------------------------------------------");
+        System.out.println("Задание 3.1");
+
+
+        List<String> strings = List.of("qwerty", "asdfg", "zx");
+        List<Integer> lengths = ListTransformer.transform(strings, new Length());
+        System.out.println(lengths); // Вывод: [6, 5, 2]
+
+
+        List<Integer> numbers = List.of(1, -3, 7);
+        List<Integer> absoluteValues = ListTransformer.transform(numbers, new Abs());
+        System.out.println(absoluteValues); // Вывод: [1, 3, 7]
+
+        ArrayList<Integer> numbers1 = new ArrayList<>();
+        numbers1.add(2);
+        numbers1.add(7);
+        numbers1.add(8);
+        ArrayList<Integer> numbers2 = new ArrayList<>();
+        numbers2.add(-5);
+        numbers2.add(-3);
+        numbers2.add(-2);
+        List<ArrayList<Integer>> numbersarr = List.of(numbers1, numbers2);
+        List<Integer> maxValues = ListTransformer.transform(numbersarr, new Max());
+        System.out.println(maxValues);
+
+        System.out.println("-------------------------------------------");
+        System.out.println("Задание 3.2");
+        List<String> strings1 = List.of("qwerty", "asdfg", "zx");
+        List<String> less3 = ListFiltr.filter(strings1, new Less());
+        System.out.println(less3); // Вывод: [6, 5, 2]
+
+
+        List<Integer> numbers20 = List.of(1, -3, 7);
+        List<Integer> pos = ListFiltr.filter(numbers20, new Positive());
+        System.out.println(pos); // Вывод: [1, 3, 7]
+
+        ArrayList<Integer> numbers21 = new ArrayList<>();
+        numbers21.add(2);
+        numbers21.add(7);
+        numbers21.add(8);
+        ArrayList<Integer> numbers22 = new ArrayList<>();
+        numbers22.add(-2);
+        numbers22.add(-5);
+        numbers22.add(-2);
+        List<ArrayList<Integer>> numbersarr1 = List.of(numbers21, numbers22);
+        List<ArrayList<Integer>> positive = ListFiltr.filter(numbersarr1, new PositiveList());
+        System.out.println(positive);
+
+        System.out.println("-------------------------------------------");
+        System.out.println("Задание 3.3");
+    }
+
+    public static void addPointToBox(Box<Pointthree> box) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите x: ");
+        int x = in.nextInt();
+        System.out.print("Введите y: ");
+        int y = in.nextInt();
+        System.out.print("Введите z: ");
+        int z = in.nextInt();
+
+
+        Pointthree point = new Pointthree(x, y, z);
+
+        box.add(point);
+        System.out.println("Точка добавлена в коробку: " + point);
+    }
+}
+
+
