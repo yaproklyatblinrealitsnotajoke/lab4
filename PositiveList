@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+
+public class PositiveList implements Filtr<ArrayList<Integer>> {
+    public boolean test(ArrayList<Integer> str) {
+        for (Integer item : str) {
+            if (item > 0) return false;
+        }
+        return true;
+    }
+}
