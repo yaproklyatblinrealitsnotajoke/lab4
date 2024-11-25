@@ -1,0 +1,5 @@
+public class SumStr implements Reduction<String>{
+    public String red(String a, String b) {
+         return a != null ? a + b: "";
+    }
+}
