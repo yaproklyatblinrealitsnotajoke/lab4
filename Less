@@ -1,0 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Less implements Filtr<String> {
+    public boolean test(String str) {
+        return str.length() >= 3;
+    }
+}
