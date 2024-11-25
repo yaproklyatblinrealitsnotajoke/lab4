@@ -1,0 +1,5 @@
+public class SumInt implements Reduction<Integer> {
+    public Integer red(Integer a, Integer b) {
+        return a != null ? a + b;
+    }
+}
