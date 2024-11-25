@@ -1,0 +1,5 @@
+public class Positive implements Filtr<Integer> {
+    public boolean test(Integer str) {
+        return str > 0;
+    }
+}
