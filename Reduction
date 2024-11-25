@@ -1,0 +1,3 @@
+public interface Reduction<T> {
+    String red(T a, T b);
+}
