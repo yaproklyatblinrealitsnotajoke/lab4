@@ -1,0 +1,3 @@
+public interface Filtr<T>{
+    boolean test(T value);
+}
