@@ -1,0 +1,5 @@
+public class Length  implements Transformer<String, Integer> {
+    public Integer apply(String value) {
+        return value.length(); // Преобразуем строку в ее длину
+    }
+}
